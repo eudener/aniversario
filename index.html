@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para Stephany 💌</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hearts"></div>
+
+  <div class="card">
+    <h1>Oi, tetéfi!</h1>
+    <p>
+      Hoje é um dia especial porque é o seu aniversário... <br/>
+      E olha só, o mundo ficou mais bonito desde que você chegou! 🎉💫
+    </p>
+  
+    <button id="reveal">Clique aqui 💖</button>
+  
+    <p id="fake-message" class="hidden">
+      Te enganei! deeerr 😄<br/>
+      <button id="reveal-true">Clique aqui de novo 💖</button>
+    </p>
+  
+    <p id="real-message" class="hidden">
+      Não sei se posso dizer muito ainda, mas... você é aquela pessoa que faz meus dias ficarem mais leves.  
+      Feliz aniversário, Stephany! ✨
+<br>
+      de: Denerzinho #lindo 
+    </p>
+  </div>
+  
+  
+  <script src="script.js"></script>
+  <script>
+    // Corações flutuando verticalmente
+    const heartsContainer = document.querySelector('.hearts');
+  
+    for (let i = 0; i < 20; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDelay = Math.random() * 8 + 's';
+      heartsContainer.appendChild(heart);
+    }
+  
+    // Corações voando aleatoriamente
+    for (let i = 0; i < 15; i++) {
+      const flying = document.createElement('div');
+      flying.className = 'flying-heart';
+      flying.style.top = Math.random() * 100 + 'vh';
+      flying.style.left = Math.random() * 100 + 'vw';
+      flying.style.animationDelay = Math.random() * 10 + 's';
+      flying.style.animationDuration = (8 + Math.random() * 5) + 's';
+      document.body.appendChild(flying);
+    }
+  </script>
+  <!-- ... seu HTML aqui ... -->
+
+<script>
+    const btnReveal = document.getElementById("reveal");
+    const btnRevealTrue = document.getElementById("reveal-true");
+    const fakeMessage = document.getElementById("fake-message");
+    const realMessage = document.getElementById("real-message");
+  
+    btnReveal.addEventListener("click", function () {
+      fakeMessage.classList.remove("hidden");
+      btnReveal.style.display = "none";
+    });
+  
+    btnRevealTrue.addEventListener("click", function () {
+      realMessage.classList.remove("hidden");
+      btnRevealTrue.style.display = "none";
+    });
+  </script>
+  
+  </body>
+  
+  
+</body>
+</html>
